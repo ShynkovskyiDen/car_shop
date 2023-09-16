@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car shop</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <img class="search__icon" src="img/search.svg" alt="search" />
+      <form class="search">
+        <input class="search__area" type="text" name="text1" placeholder="Пошук" />
+      </form>
+      <label class="sign__in">
+        <a href="pages/sign.html">
+          <img src="img/person-circle.svg" alt="person" />
+          <input type="button" value="Увійти" />
+        </a>
+        <a href="pages/log.html">
+          <input type="button" value="Зареєструватися" />
+        </a>
+      </label>
+    </header>
+    <main class="main">
+      <div class="car__filter">
+        <form class="form__filter" method="post" action="https://fom.in.ua/echo">
+          <div class="car__item">
+            <h3>Тип кузова</h3>
+            <input type="checkbox" checked="checked" name="Седан" />
+            Седан
+            <input type="checkbox" checked="checked" name="Універсал" />
+            Універсал
+            <input type="checkbox" checked="checked" name="Хетчбек" />
+            Хетчбек
+            <br />
+            <input type="checkbox" checked="checked" name="Джип" />
+            Джип
+            <input type="checkbox" checked="checked" name="Купе" />
+            Купе
+            <input type="checkbox" checked="checked" name="Кабріолет" />
+            Кабріолет
+          </div>
+          <div class="car__item">
+            <h3>Марка авто</h3>
+            <select name="Марка авто">
+              <option value="Volkswagen">Volkswagen</option>
+              <option value="Audi">Audi</option>
+              <option value="BMW">BMW</option>
+              <option value="Honda">Honda</option>
+              <option value="Huyndai">Huyndai</option>
+              <option value="Skoda">Skoda</option>
+              <option value="Deawoo">Deawoo</option>
+              <option value="Chevrolet">Chevrolet</option>
+              <option value="Renault">Renault</option>
+            </select>
+          </div>
+          <div class="car__item">
+            <h3>Країна виробник</h3>
+            <select multiple="multiple" name="Країна виробник">
+              <option value="Китай">Китай</option>
+              <option value="Німеччина">Німеччина</option>
+              <option value="Італія">Італія</option>
+              <option value="Україна">Україна</option>
+              <option value="США">США</option>
+              <option value="Японія">Японія</option>
+              <option value="Корея">Корея</option>
+              <option value="Франція">Франція</option>
+              <option value="Великобританія">Великобританія</option>
+            </select>
+          </div>
+          <div class="car__item">
+            <h3>Ціна</h3>
+            <input type="number" name="Ціна від" placeholder="Від" />
+            <input type="number" name="Ціна до" placeholder="До" />
+          </div>
+          <div class="car__item">
+            <h3>Рік випуску</h3>
+            Від
+            <select name="Рік випуску, Від">
+              <option value="1999">1999</option>
+              <option value="2000">2000</option>
+              <option value="2001">2001</option>
+              <option value="2002">2002</option>
+              <option value="2003">2003</option>
+              <option value="2004">2004</option>
+              <option value="2005">2005</option>
+              <option value="2006">2006</option>
+              <option value="2007">2007</option>
+              <option value="2008">2008</option>
+              <option value="2009">2009</option>
+              <option value="2010">2010</option>
+              <option value="2011">2011</option>
+              <option value="2012">2012</option>
+            </select>
+            До
+            <select name="Рік випуску, До">
+              <option value="1999">1999</option>
+              <option value="2000">2000</option>
+              <option value="2001">2001</option>
+              <option value="2002">2002</option>
+              <option value="2003">2003</option>
+              <option value="2004">2004</option>
+              <option value="2005">2005</option>
+              <option value="2006">2006</option>
+              <option value="2007">2007</option>
+              <option value="2008">2008</option>
+              <option value="2009">2009</option>
+              <option value="2010">2010</option>
+              <option value="2011">2011</option>
+              <option value="2012">2012</option>
+            </select>
+          </div>
+          <div class="car__item">
+            <h3>Стан</h3>
+            <input type="checkbox" checked="checked" name="Новий" />
+            Новий
+            <input type="checkbox" checked="checked" name="Побитий" />
+            Побитий
+            <input type="checkbox" checked="checked" name="Після ДТП" />
+            Після ДТП
+          </div>
+          <div class="car__item">
+            <h3>Тип палива</h3>
+            <input type="checkbox" checked="checked" name="Газ" />
+            Газ
+            <input type="checkbox" checked="checked" name="Бензин" />
+            Бензин
+            <input type="checkbox" checked="checked" name="Дизель" />
+            Дизель
+          </div>
+          <div class="car__item">
+            <h3>Тип коробки передач</h3>
+            <input type="checkbox" checked="checked" name="Механічна" />
+            Механічна
+            <input type="checkbox" checked="checked" name="Автоматична" />
+            Автоматична
+          </div>
+          <div class="car__item">
+            <h3>Колір</h3>
+            <select name="Колір">
+              <option value="Білий">Білий</option>
+              <option value="Чорний">Чорний</option>
+              <option value="Червоний">Червоний</option>
+              <option value="Жовтий">Жовтий</option>
+              <option value="Синій">Синій</option>
+              <option value="Помаранчевий">Помаранчевий</option>
+              <option value="Сірий">Сірий</option>
+              <option value="Зелений">Зелений</option>
+            </select>
+          </div>
+          <div class="car__item">
+            <h3>Комфорт</h3>
+            <input type="checkbox" checked="checked" name="Люкс" />
+            Люкс
+            <input type="checkbox" checked="checked" name="Стандарт" />
+            Стандарт
+          </div>
+          <input type="submit" name="Надіслати" value="Надіслати" />
+        </form>
+      </div>
+      <div class="car__block">
+        <h2 class="car__name">Renault Scenic 2</h2>
+        <img class="car__image" src="img/Renault.webp" alt="Renault" />
+        <h3 class="car__price">184 000грн</h3>
+        <ul class="car__desc">
+          <li>Тип кузова: Купе</li>
+          <li>Країна виробник: Франція</li>
+          <li>Рік: 2005</li>
+          <li>Стан: Новий</li>
+          <li>Тип палива: Дизель</li>
+          <li>Тип КП: Автомат</li>
+          <li>Колір: Червоний</li>
+          <li>Комфорт: Стандарт</li>
+        </ul>
+      </div>
+      <div class="car__block">
+        <h2 class="car__name">Audi A5 2.0Т Quattro</h2>
+        <img class="car__image" src="img/audi.webp" alt="audi" />
+        <h3 class="car__price">623 000 грн.</h3>
+        <ul class="car__desc">
+          <li>Тип кузова: Седан</li>
+          <li>Країна виробник: Німеччина</li>
+          <li>Рік: 2014</li>
+          <li>Стан: Новий</li>
+          <li>Тип палива: Бензин</li>
+          <li>Тип КП: Автомат</li>
+          <li>Колір: Чорний</li>
+          <li>Комфорт: Люкс</li>
+        </ul>
+      </div>
+      <div class="car__block">
+        <h2 class="car__name">Honda Accord 7 2006 2.0 MT</h2>
+        <img class="car__image" src="img/honda.webp" alt="honda" />
+        <h3 class="car__price">276 000грн</h3>
+        <ul class="car__desc">
+          <li>Тип кузова: Седан</li>
+          <li>Країна виробник: Японія</li>
+          <li>Рік: 2006</li>
+          <li>Стан: Новий</li>
+          <li>Тип палива: Бензин</li>
+          <li>Тип КП: Механіка</li>
+          <li>Колір: Сірий</li>
+          <li>Комфорт: Стандарт</li>
+        </ul>
+      </div>
+      <div class="car__block">
+        <h2 class="car__name">BMW 428 I. 2014</h2>
+        <img class="car__image" src="img/bmw.webp" alt="bmw" />
+        <h3 class="car__price">148 000 грн.</h3>
+        <ul class="car__desc">
+          <li>Тип кузова: Седан</li>
+          <li>Країна виробник: Німеччина</li>
+          <li>Рік: 2014</li>
+          <li>Стан: Після ДТП</li>
+          <li>Тип палива: Бензин</li>
+          <li>Тип КП: Механіка</li>
+          <li>Колір: Синій</li>
+          <li>Комфорт: Люкс</li>
+        </ul>
+      </div>
+      <div class="car__block">
+        <h2 class="car__name">Ваз 21099</h2>
+        <img class="car__image" src="img/vaz.webp" alt="vaz" />
+        <h3 class="car__price">96 000 грн.</h3>
+        <ul class="car__desc">
+          <li>Тип кузова: Седан</li>
+          <li>Країна виробник: Україна</li>
+          <li>Рік: 2008</li>
+          <li>Стан: Побитий</li>
+          <li>Тип палива: Газ</li>
+          <li>Тип КП: Механіка</li>
+          <li>Колір: Червоний</li>
+          <li>Комфорт: Стандарт</li>
+        </ul>
+      </div>
+      <div class="car__block">
+        <h2 class="car__name">Skoda Octavia A7</h2>
+        <img class="car__image" src="img/skoda.webp" alt="skoda" />
+        <h3 class="car__price">390 000 грн.</h3>
+        <ul class="car__desc">
+          <li>Тип кузова: Седан</li>
+          <li>Країна виробник: Німеччина</li>
+          <li>Рік: 2014</li>
+          <li>Стан: Новий</li>
+          <li>Тип палива: Дизель</li>
+          <li>Тип КП: Механіка</li>
+          <li>Колір: Синій</li>
+          <li>Комфорт: Стандарт</li>
+        </ul>
+      </div>
+      <div class="car__block">
+        <h2 class="car__name">HYUNDAI I30</h2>
+        <img class="car__image" src="img/hyundai.webp" alt="Huyndai" />
+        <h3 class="car__price">210 000 грн.</h3>
+        <ul class="car__desc">
+          <li>Тип кузова: Хетчбек</li>
+          <li>Країна виробник: Корея</li>
+          <li>Рік: 2008</li>
+          <li>Стан: Новий</li>
+          <li>Тип палива: Бензин</li>
+          <li>Тип КП: Механіка</li>
+          <li>Колір: Чорний</li>
+          <li>Комфорт: Стандарт</li>
+        </ul>
+      </div>
+    </main>
+    <footer class="footer"></footer>
+  </body>
+</html>
